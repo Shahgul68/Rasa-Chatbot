@@ -41,7 +41,7 @@ def create_illness_vector(encoded_symptoms):
     :return: A single vector flagging each symptoms appearence in the user message (based on vector similarity)
     '''
 
-    threshold = 0.85
+    threshold = 0.90
     symptoms_df['symptom_flagged'] = 0
 
     for encoded_symptom in encoded_symptoms:
