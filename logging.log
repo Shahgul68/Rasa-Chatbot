@@ -790,3 +790,89 @@ KeyError: 'symptom_vector'
 20:34:36,761 root INFO Flagged 1 potential symptom matches
 20:34:36,779 root INFO Diagnosing user with Radiation exposure radiation sickness
 20:34:36,779 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+19:58:50,313 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+19:58:50,316 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+19:58:50,316 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+20:08:43,36 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:08:43,36 root INFO Encoding symptom muscle spasm
+20:08:43,59 root INFO Flagged 1 potential symptom matches
+20:08:43,82 root INFO Diagnosing user with Vitamin D deficiency
+20:08:43,83 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:09:01,228 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:09:01,229 root INFO Encoding symptom painful gums
+20:09:01,239 root INFO Flagged 1 potential symptom matches
+20:09:01,261 root INFO Diagnosing user with Pulpitis dental root inflammation
+20:09:01,262 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:09:14,402 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:09:14,402 root INFO Encoding symptom vomiting
+20:09:14,412 root INFO Flagged 1 potential symptom matches
+20:09:14,435 root INFO Diagnosing user with Acidosis  (excessive acid in the body)
+20:09:14,435 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:34:07,661 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:34:07,668 root INFO Encoding symptom vaginal itching
+20:34:07,674 root INFO Encoding symptom pain or soreness of breast
+20:34:07,684 root INFO Flagged 0 potential symptom matches
+20:34:07,690 root INFO Flagged 1 potential symptom matches
+20:34:07,713 root INFO Diagnosing user with Radiation exposure radiation sickness
+20:34:07,713 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:34:19,383 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:34:19,384 root INFO Encoding symptom blood in vomit
+20:34:19,391 root INFO Encoding symptom facial droop
+20:34:19,395 root INFO Encoding symptom sneezing
+20:34:19,399 root INFO Encoding symptom sneezing
+20:34:19,402 root INFO Encoding symptom blood in vomit
+20:34:19,411 root INFO Flagged 1 potential symptom matches
+20:34:19,416 root INFO Flagged 0 potential symptom matches
+20:34:19,422 root INFO Flagged 1 potential symptom matches
+20:34:19,428 root INFO Flagged 1 potential symptom matches
+20:34:19,434 root INFO Flagged 1 potential symptom matches
+20:34:19,457 root INFO Diagnosing user with Hemoptysis coughing blood
+20:34:19,457 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:34:31,174 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:34:31,174 root INFO Encoding symptom psychiatric problem
+20:34:31,186 root INFO Flagged 1 potential symptom matches
+20:34:31,202 root INFO Diagnosing user with Puerperal depression depression after giving birth
+20:34:31,202 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:34:45,149 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:34:45,150 root INFO Encoding symptom weight loss
+20:34:45,155 root INFO Encoding symptom sneezing
+20:34:45,159 root INFO Encoding symptom swelling
+20:34:45,163 root INFO Encoding symptom foot swelling
+20:34:45,172 root INFO Flagged 0 potential symptom matches
+20:34:45,177 root INFO Flagged 1 potential symptom matches
+20:34:45,183 root INFO Flagged 2 potential symptom matches
+20:34:45,189 root INFO Flagged 0 potential symptom matches
+20:34:45,212 root INFO Diagnosing user with Facial swelling
+20:34:45,212 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:36:23,157 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:36:23,157 root INFO Encoding symptom weight loss
+20:36:23,163 root INFO Encoding symptom sneezing
+20:36:23,167 root INFO Encoding symptom swelling
+20:36:23,170 root INFO Encoding symptom foot swelling
+20:36:23,179 root INFO Flagged 0 potential symptom matches
+20:36:23,185 root INFO Flagged 1 potential symptom matches
+20:36:23,190 root INFO Flagged 2 potential symptom matches
+20:36:23,196 root INFO Flagged 0 potential symptom matches
+20:36:23,218 root INFO Diagnosing user with Facial swelling
+20:36:23,219 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:37:07,24 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:37:07,24 root INFO Encoding symptom neck swelling
+20:37:07,34 root INFO Flagged 0 potential symptom matches
+20:37:07,67 root INFO Unable to find a diagnosis, the closest match was Cholecystitis inflammation of the gallbladder at 0.0
+20:37:07,68 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:37:53,216 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:37:53,217 root INFO Encoding symptom ankle pain
+20:37:53,230 root INFO Flagged 1 potential symptom matches
+20:37:53,252 root INFO Diagnosing user with Ankle sprain
+20:37:53,252 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:38:44,339 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+20:38:44,339 root INFO Encoding symptom skin growths
+20:38:44,350 root INFO Flagged 0 potential symptom matches
+20:38:44,373 root INFO Unable to find a diagnosis, the closest match was Cholecystitis inflammation of the gallbladder at 0.0
+20:38:44,373 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+20:40:29,190 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+20:40:29,192 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+20:40:29,193 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+10:00:27,99 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+10:00:27,102 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+10:00:27,102 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
