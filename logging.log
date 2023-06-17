@@ -876,3 +876,14 @@ KeyError: 'symptom_vector'
 10:00:27,99 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
 10:00:27,102 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
 10:00:27,102 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+12:09:29,667 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+12:09:29,670 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+12:09:29,670 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+12:10:57,427 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+12:10:57,429 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+12:10:57,429 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+12:13:39,673 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+12:13:39,674 root INFO Encoding symptom vomiting
+12:13:39,698 root INFO Flagged 1 potential symptom matches
+12:13:39,723 root INFO Diagnosing user with Acidosis  (excessive acid in the body)
+12:13:39,724 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
