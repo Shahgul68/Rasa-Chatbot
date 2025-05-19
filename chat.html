@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Medical Chatbot</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      #chat-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      #messages {
+        height: 400px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      #input-container {
+        display: flex;
+        gap: 10px;
+      }
+      #user-input {
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      #send-button {
+        padding: 10px 20px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .message {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .user-message {
+        background: #e3f2fd;
+        text-align: right;
+      }
+      .bot-message {
+        background: #f5f5f5;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chat-container">
+      <h1>Medical Assistant Chatbot</h1>
+      <div id="messages"></div>
+      <div id="input-container">
+        <input type="text" id="user-input" placeholder="Type your message here...">
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+
+    <script>
+      const messagesDiv = document.getElementById('messages');
+      const userInput = document.getElementById('user-input');
+      const sendButton = document.getElementById('send-button');
+
+      // Function to add message to chat
+      function addMessage(message, isUser) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
+        messageDiv.textContent = message;
+        messagesDiv.appendChild(messageDiv);
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+      }
+
+      // Send message to Rasa server
+      async function sendMessage(text) {
+        try {
+          const response = await fetch('http://localhost:5005/webhooks/rest/webhook', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              message: text,
+              sender: 'user'
+            })
+          });
+          
+          const data = await response.json();
+          data.forEach(item => {
+            if (item.text) {
+              addMessage(item.text, false);
+            }
+          });
+        } catch (error) {
+          console.error('Error:', error);
+          addMessage('Sorry, there was an error sending your message.', false);
+        }
+      }
+
+      // Event listeners
+      sendButton.addEventListener('click', () => {
+        const message = userInput.value.trim();
+        if (message) {
+          addMessage(message, true);
+          sendMessage(message);
+          userInput.value = '';
+        }
+      });
+
+      userInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          sendButton.click();
+        }
+      });
+    </script>
+  </body>
+</html>

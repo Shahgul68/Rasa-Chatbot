@@ -1,0 +1,108 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Rasa
+models/
+*.tar.gz
+*.zip
+*.pkl
+*.pt
+*.tf_model
+*.h5
+*.model
+*.bin
+*.npy
+*.npz
+*.json
+*.yaml
+*.yml
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Local development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Database
+*.db
+*.sqlite3
+
+# Credentials
+credentials.yml
+
+# NLU Data
+nlu.md
+stories.md
+rules.md
+
+# Cache
+.cache/
+.rasa/
+
+# Testing
+.coverage
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Docker
+.docker/
+.docker-compose.yml
+
+# Virtual Environment
+venv38/
+env/
+
+# Logs and databases
+*.log
+*.db
+
+# Local development files
+*.local
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
