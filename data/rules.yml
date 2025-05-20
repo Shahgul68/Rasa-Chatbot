@@ -2,51 +2,12 @@ version: "3.1"
 
 rules:
 
-- rule: Greet
-  steps:
-  - intent: greet
-  - action: utter_greet
-
-- rule: Goodbye
+- rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Ask Symptoms
+- rule: Say 'I am a bot' anytime the user challenges
   steps:
-  - intent: ask_symptoms
-  - action: utter_ask_more_symptoms
-  - action: utter_provide_basic_advice
-
-- rule: Ask Treatment
-  steps:
-  - intent: ask_treatment
-  - action: utter_ask_more_details
-  - action: utter_provide_treatment_advice
-
-- rule: Ask Diagnosis
-  steps:
-  - intent: ask_diagnosis
-  - action: utter_ask_more_symptoms
-  - action: utter_provide_diagnosis_advice
-
-- rule: Ask Medication
-  steps:
-  - intent: ask_medication
-  - action: utter_ask_more_details
-  - action: utter_provide_medication_advice
-
-- rule: Ask Prevention
-  steps:
-  - intent: ask_prevention
-  - action: utter_provide_prevention_advice
-
-- rule: Ask Doctor
-  steps:
-  - intent: ask_doctor
-  - action: utter_provide_doctor_advice
-
-- rule: Ask Duration
-  steps:
-  - intent: ask_duration
-  - action: utter_provide_duration_advice
+  - intent: bot_challenge
+  - action: utter_iamabot

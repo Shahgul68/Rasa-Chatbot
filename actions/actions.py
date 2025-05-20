@@ -1,36 +1,81 @@
 from typing import Any, Text, Dict, List
+import os
+import logging
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet
+from diaganose_functions.diagnose import encode_symptom, create_illness_vector, get_diagnosis
 
+# Configure logging
+log_dir = os.path.dirname(os.path.abspath(__file__))
+log_file = os.path.join(log_dir, 'rasa_actions.log')
+
+# Clear any existing handlers
+for handler in logging.root.handlers[:]:
+    logging.root.removeHandler(handler)
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file, mode='w'),  # 'w' to overwrite previous logs
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
 class ActionDiagnoseSymptoms(Action):
     def name(self) -> Text:
         return "action_diagnose_symptoms"
 
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-        # Get the last user message
-        latest_message = tracker.latest_message
-        
-        # Extract symptoms from the message
-        symptoms = []
-        for entity in latest_message.get("entities", []):
-            if entity["entity"] == "symptom":
-                symptoms.append(entity["value"])
-        
-        # Simple symptom-based diagnosis
-        if "upper abdominal pain" in symptoms:
-            response = "I see you're experiencing upper abdominal pain. This could be related to several conditions such as gastritis, stomach ulcers, or gallbladder issues. It's important to consult a healthcare professional for proper diagnosis and treatment. Would you like me to provide more information about any of these conditions?"
-        elif "fever" in symptoms:
-            response = "I see you have a fever. This is often a sign of infection. Please monitor your temperature and consult a doctor if it persists or if you have other symptoms like cough or difficulty breathing."
-        elif "cough" in symptoms:
-            response = "I see you have a cough. This could be related to a respiratory infection or allergies. If it persists or is severe, please consult a healthcare professional."
-        else:
-            response = "I see you're experiencing symptoms. While I can provide general information, it's important to consult a healthcare professional for proper diagnosis and treatment. Would you like me to provide more information about any specific symptoms?"
-        
-        dispatcher.utter_message(text=response)
-        
-        return []
+    async def run(
+        self, 
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+        logger.info("\n" + "="*50)
+        logger.info("ActionDiagnoseSymptoms started")
+        logger.info(f"Current working directory: {os.getcwd()}")
+        logger.info(f"Input data directory exists: {os.path.exists('input_data')}")
+        if os.path.exists('input_data'):
+            logger.info(f"Input data directory contents: {os.listdir('input_data')}")
+        try:
+            logger.info("Action Diagnose Symptoms Triggered")
+            logger.info(f"Latest Message: {tracker.latest_message}")
+            
+            # Get the symptom from the latest message
+            symptom_entity = next(
+                (e for e in tracker.latest_message.get("entities", []) 
+                 if e["entity"] == "symptom"),
+                None
+            )
+            
+            if not symptom_entity:
+                dispatcher.utter_message(text="I'm sorry, I didn't catch that. Could you describe your symptoms again?")
+                return []
+                
+            symptom = symptom_entity.get("value")
+            logger.info(f"Extracted symptom: {symptom}")
+            
+            # Encode the symptom
+            encoded_symptom = encode_symptom(symptom)
+            logger.info(f"Encoded symptom: {encoded_symptom}")
+            
+            # Create illness vector
+            illness_vector = create_illness_vector([encoded_symptom])
+            logger.info(f"Illness vector: {illness_vector}")
+            
+            # Get diagnosis
+            diagnosis = get_diagnosis(illness_vector)
+            logger.info(f"Diagnosis: {diagnosis}")
+            
+            dispatcher.utter_message(text=diagnosis)
+            
+        except Exception as e:
+            error_msg = f"Error in diagnosis: {str(e)}"
+            logger.error(error_msg, exc_info=True)
+            dispatcher.utter_message(
+                text=f"I'm sorry, I couldn't process your symptoms. "
+                     f"The error was: {str(e)}. Please try again with different symptoms."
+            )
+            return []

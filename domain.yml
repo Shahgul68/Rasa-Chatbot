@@ -10,13 +10,6 @@ intents:
   - bot_challenge
   - gratitude
   - describe_symptoms
-  - ask_symptoms
-  - ask_treatment
-  - ask_diagnosis
-  - ask_medication
-  - ask_prevention
-  - ask_doctor
-  - ask_duration
 
 entities:
   - symptom
@@ -29,15 +22,6 @@ actions:
   - utter_no_problem
   - action_diagnose_symptoms
   - utter_happy
-  - utter_ask_more_symptoms
-  - utter_provide_basic_advice
-  - utter_ask_more_details
-  - utter_provide_treatment_advice
-  - utter_provide_diagnosis_advice
-  - utter_provide_medication_advice
-  - utter_provide_prevention_advice
-  - utter_provide_doctor_advice
-  - utter_provide_duration_advice
 
 slots:
   symptom:
@@ -61,33 +45,6 @@ responses:
   
   utter_happy:
   - text: "Thank you for your time!"
-
-  utter_ask_more_symptoms:
-  - text: "Could you tell me more about your symptoms?"
-
-  utter_provide_basic_advice:
-  - text: "Here's some basic advice for your symptoms."
-
-  utter_ask_more_details:
-  - text: "Could you provide more details about your condition?"
-
-  utter_provide_treatment_advice:
-  - text: "Here are some treatment options for your condition."
-
-  utter_provide_diagnosis_advice:
-  - text: "Based on your symptoms, here's what might be going on."
-
-  utter_provide_medication_advice:
-  - text: "Here are some medication options that might help."
-
-  utter_provide_prevention_advice:
-  - text: "Here are some ways to prevent this condition."
-
-  utter_provide_doctor_advice:
-  - text: "Here's what you should discuss with your doctor."
-
-  utter_provide_duration_advice:
-  - text: "Here's what you need to know about the duration of this condition."
 
 session_config:
   session_expiration_time: 60

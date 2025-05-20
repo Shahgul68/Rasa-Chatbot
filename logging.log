@@ -539,3 +539,235 @@ KeyError: 'symptom_vector'
 07:24:54,799 root INFO Flagged 1 potential symptom matches
 07:24:54,818 root INFO Diagnosing user with Hemoptysis coughing blood
 07:24:54,818 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+14:54:48,72 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+14:54:48,78 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+14:54:48,78 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+14:57:37,127 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+14:57:37,132 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+14:57:37,132 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+15:00:00,693 rasa_sdk.endpoint ERROR Exception occurred during execution of request <Request: GET />
+Traceback (most recent call last):
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic_routing\router.py", line 79, in resolve
+    route, param_basket = self.find_route(
+  File "", line 9, in find_route
+sanic_routing.exceptions.NotFound: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic_routing\router.py", line 79, in resolve
+    route, param_basket = self.find_route(
+  File "", line 9, in find_route
+sanic_routing.exceptions.NotFound: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic\router.py", line 38, in _get
+    return self.resolve(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic_routing\router.py", line 90, in resolve
+    return self.resolve(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic_routing\router.py", line 96, in resolve
+    raise self.exception(str(e), path=path)
+sanic_routing.exceptions.NotFound: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "handle_request", line 26, in handle_request
+    from socket import socket
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic\router.py", line 66, in get
+    return self._get(path, method, host)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic\router.py", line 44, in _get
+    raise NotFound("Requested URL {} not found".format(e.path))
+sanic.exceptions.NotFound: Requested URL  not found
+15:00:00,775 rasa_sdk.endpoint ERROR Exception occurred during execution of request <Request: GET /favicon.ico>
+Traceback (most recent call last):
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic_routing\router.py", line 79, in resolve
+    route, param_basket = self.find_route(
+  File "", line 9, in find_route
+sanic_routing.exceptions.NotFound: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic\router.py", line 38, in _get
+    return self.resolve(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic_routing\router.py", line 96, in resolve
+    raise self.exception(str(e), path=path)
+sanic_routing.exceptions.NotFound: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "handle_request", line 26, in handle_request
+    from socket import socket
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic\router.py", line 66, in get
+    return self._get(path, method, host)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic\router.py", line 44, in _get
+    raise NotFound("Requested URL {} not found".format(e.path))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+15:02:50,430 rasa_sdk.endpoint ERROR Exception occurred during execution of request <Request: GET />
+Traceback (most recent call last):
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic_routing\router.py", line 79, in resolve
+    route, param_basket = self.find_route(
+  File "", line 9, in find_route
+sanic_routing.exceptions.NotFound: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic_routing\router.py", line 79, in resolve
+    route, param_basket = self.find_route(
+  File "", line 9, in find_route
+sanic_routing.exceptions.NotFound: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic\router.py", line 38, in _get
+    return self.resolve(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic_routing\router.py", line 90, in resolve
+    return self.resolve(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic_routing\router.py", line 96, in resolve
+    raise self.exception(str(e), path=path)
+sanic_routing.exceptions.NotFound: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "handle_request", line 26, in handle_request
+    from socket import socket
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic\router.py", line 66, in get
+    return self._get(path, method, host)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\sanic\router.py", line 44, in _get
+    raise NotFound("Requested URL {} not found".format(e.path))
+sanic.exceptions.NotFound: Requested URL  not found
+15:32:56,669 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+15:32:56,676 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+15:32:56,676 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+15:35:17,777 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+15:35:17,784 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+15:35:17,784 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+15:39:52,483 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+15:39:52,488 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+15:39:52,488 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+15:44:10,157 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+15:44:10,157 actions.actions INFO Action Diagnose Symptoms Triggered
+15:44:10,157 actions.actions INFO Latest Message: {'intent': {'name': 'describe_symptoms', 'confidence': 1.0}, 'entities': [{'entity': 'symptom', 'start': 7, 'end': 22, 'confidence_entity': 0.9995155334472656, 'value': 'joint stiffness', 'extractor': 'DIETClassifier', 'processors': ['EntitySynonymMapper']}], 'text': 'I have joint stiffness', 'message_id': '0dec1618912f4cd6857f04ebbf0d8b8f', 'metadata': {}, 'text_tokens': [[0, 1], [2, 6], [7, 12], [13, 22]], 'intent_ranking': [{'name': 'describe_symptoms', 'confidence': 1.0}, {'name': 'gratitude', 'confidence': 7.455041371250517e-18}, {'name': 'affirm', 'confidence': 3.486039781451122e-18}, {'name': 'bot_challenge', 'confidence': 2.4784779606701866e-18}, {'name': 'mood_great', 'confidence': 2.2426487680313184e-18}, {'name': 'goodbye', 'confidence': 1.9606149207364632e-18}, {'name': 'mood_unhappy', 'confidence': 1.89985829794929e-18}, {'name': 'deny', 'confidence': 1.4294240365805557e-18}, {'name': 'greet', 'confidence': 8.469541583009547e-19}], 'response_selector': {'all_retrieval_intents': [], 'default': {'response': {'responses': None, 'confidence': 0.0, 'intent_response_key': None, 'utter_action': 'utter_None'}, 'ranking': []}}}
+15:44:10,157 actions.actions INFO Extracted symptom: joint stiffness
+15:44:10,420 actions.actions ERROR Error in diagnosis: issubclass() arg 1 must be a class
+Traceback (most recent call last):
+  File "F:\Github\Rasa-Chatbot\actions\actions.py", line 38, in run
+    encoded_symptom = encode_symptom(symptom)
+  File "F:\Github\Rasa-Chatbot\diaganose_functions\diagnose.py", line 57, in encode_symptom
+    nlp = get_nlp()
+  File "F:\Github\Rasa-Chatbot\diaganose_functions\diagnose.py", line 29, in get_nlp
+    _nlp = spacy.load('en_core_web_sm')
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\__init__.py", line 51, in load
+    return util.load_model(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\util.py", line 347, in load_model
+    return load_model_from_package(name, **kwargs)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\util.py", line 380, in load_model_from_package
+    return cls.load(vocab=vocab, disable=disable, exclude=exclude, config=config)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\en_core_web_sm\__init__.py", line 10, in load
+    return load_model_from_init_py(__file__, **overrides)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\util.py", line 540, in load_model_from_init_py
+    return load_model_from_path(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\util.py", line 415, in load_model_from_path
+    nlp = load_model_from_config(config, vocab=vocab, disable=disable, exclude=exclude)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\util.py", line 452, in load_model_from_config
+    nlp = lang_cls.from_config(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\language.py", line 1714, in from_config
+    nlp.add_pipe(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\language.py", line 776, in add_pipe
+    pipe_component = self.create_pipe(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\language.py", line 660, in create_pipe
+    resolved = registry.resolve(cfg, validate=validate)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\thinc\config.py", line 746, in resolve
+    resolved, _ = cls._make(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\thinc\config.py", line 795, in _make
+    filled, _, resolved = cls._fill(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\thinc\config.py", line 850, in _fill
+    filled[key], validation[v_key], final[key] = cls._fill(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\thinc\config.py", line 849, in _fill
+    promise_schema = cls.make_promise_schema(value, resolve=resolve)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\thinc\config.py", line 1057, in make_promise_schema
+    return create_model("ArgModel", **sig_args)
+  File "pydantic\main.py", line 990, in pydantic.main.create_model
+  File "pydantic\main.py", line 299, in pydantic.main.ModelMetaclass.__new__
+  File "pydantic\fields.py", line 411, in pydantic.fields.ModelField.infer
+  File "pydantic\fields.py", line 342, in pydantic.fields.ModelField.__init__
+  File "pydantic\fields.py", line 451, in pydantic.fields.ModelField.prepare
+  File "pydantic\fields.py", line 550, in pydantic.fields.ModelField._type_analysis
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python38\lib\typing.py", line 774, in __subclasscheck__
+    return issubclass(cls, self.__origin__)
+TypeError: issubclass() arg 1 must be a class
+15:44:10,430 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+15:46:30,53 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+15:46:30,59 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+15:46:30,59 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+15:46:42,651 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+15:46:42,656 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+15:46:42,656 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).
+15:47:50,174 rasa_sdk.executor DEBUG Received request to run 'action_diagnose_symptoms'
+15:47:50,175 actions.actions INFO 
+==================================================
+15:47:50,175 actions.actions INFO ActionDiagnoseSymptoms started
+15:47:50,175 actions.actions INFO Current working directory: F:\Github\Rasa-Chatbot
+15:47:50,175 actions.actions INFO Input data directory exists: True
+15:47:50,175 actions.actions INFO Input data directory contents: ['diagnosis_data.pkl', 'source_data.pkl', 'symptoms.pkl']
+15:47:50,175 actions.actions INFO Action Diagnose Symptoms Triggered
+15:47:50,175 actions.actions INFO Latest Message: {'intent': {'name': 'describe_symptoms', 'confidence': 1.0}, 'entities': [{'entity': 'symptom', 'start': 7, 'end': 22, 'confidence_entity': 0.9995391368865967, 'value': 'joint stiffness', 'extractor': 'DIETClassifier', 'processors': ['EntitySynonymMapper']}], 'text': 'i have joint stiffness', 'message_id': 'ba8d244a7cd94d3f8af2b4e65197afeb', 'metadata': {}, 'text_tokens': [[0, 1], [2, 6], [7, 12], [13, 22]], 'intent_ranking': [{'name': 'describe_symptoms', 'confidence': 1.0}, {'name': 'gratitude', 'confidence': 6.465153918618002e-18}, {'name': 'affirm', 'confidence': 2.819755103821549e-18}, {'name': 'bot_challenge', 'confidence': 2.175931068159782e-18}, {'name': 'mood_great', 'confidence': 2.1027348897307303e-18}, {'name': 'goodbye', 'confidence': 1.6953604321672462e-18}, {'name': 'mood_unhappy', 'confidence': 1.5931298006472769e-18}, {'name': 'deny', 'confidence': 1.1955181422634499e-18}, {'name': 'greet', 'confidence': 7.109197570732402e-19}], 'response_selector': {'all_retrieval_intents': [], 'default': {'response': {'responses': None, 'confidence': 0.0, 'intent_response_key': None, 'utter_action': 'utter_None'}, 'ranking': []}}}
+15:47:50,175 actions.actions INFO Extracted symptom: joint stiffness
+15:47:50,422 actions.actions ERROR Error in diagnosis: issubclass() arg 1 must be a class
+Traceback (most recent call last):
+  File "F:\Github\Rasa-Chatbot\actions\actions.py", line 54, in run
+    encoded_symptom = encode_symptom(symptom)
+  File "F:\Github\Rasa-Chatbot\diaganose_functions\diagnose.py", line 57, in encode_symptom
+    nlp = get_nlp()
+  File "F:\Github\Rasa-Chatbot\diaganose_functions\diagnose.py", line 29, in get_nlp
+    _nlp = spacy.load('en_core_web_sm')
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\__init__.py", line 51, in load
+    return util.load_model(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\util.py", line 347, in load_model
+    return load_model_from_package(name, **kwargs)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\util.py", line 380, in load_model_from_package
+    return cls.load(vocab=vocab, disable=disable, exclude=exclude, config=config)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\en_core_web_sm\__init__.py", line 10, in load
+    return load_model_from_init_py(__file__, **overrides)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\util.py", line 540, in load_model_from_init_py
+    return load_model_from_path(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\util.py", line 415, in load_model_from_path
+    nlp = load_model_from_config(config, vocab=vocab, disable=disable, exclude=exclude)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\util.py", line 452, in load_model_from_config
+    nlp = lang_cls.from_config(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\language.py", line 1714, in from_config
+    nlp.add_pipe(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\language.py", line 776, in add_pipe
+    pipe_component = self.create_pipe(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\spacy\language.py", line 660, in create_pipe
+    resolved = registry.resolve(cfg, validate=validate)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\thinc\config.py", line 746, in resolve
+    resolved, _ = cls._make(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\thinc\config.py", line 795, in _make
+    filled, _, resolved = cls._fill(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\thinc\config.py", line 850, in _fill
+    filled[key], validation[v_key], final[key] = cls._fill(
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\thinc\config.py", line 849, in _fill
+    promise_schema = cls.make_promise_schema(value, resolve=resolve)
+  File "f:\github\rasa-chatbot\venv38\lib\site-packages\thinc\config.py", line 1057, in make_promise_schema
+    return create_model("ArgModel", **sig_args)
+  File "pydantic\main.py", line 990, in pydantic.main.create_model
+  File "pydantic\main.py", line 299, in pydantic.main.ModelMetaclass.__new__
+  File "pydantic\fields.py", line 411, in pydantic.fields.ModelField.infer
+  File "pydantic\fields.py", line 342, in pydantic.fields.ModelField.__init__
+  File "pydantic\fields.py", line 451, in pydantic.fields.ModelField.prepare
+  File "pydantic\fields.py", line 550, in pydantic.fields.ModelField._type_analysis
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python38\lib\typing.py", line 774, in __subclasscheck__
+    return issubclass(cls, self.__origin__)
+TypeError: issubclass() arg 1 must be a class
+15:47:50,428 rasa_sdk.executor DEBUG Finished running 'action_diagnose_symptoms'
+15:51:09,452 rasa_sdk.executor INFO Registered function for 'action_diagnose_symptoms'.
+15:51:09,458 rasa_sdk.endpoint INFO Action endpoint is up and running on http://0.0.0.0:5055
+15:51:09,458 rasa_sdk.utils DEBUG Using the default number of Sanic workers (1).

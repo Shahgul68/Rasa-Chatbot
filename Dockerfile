@@ -1,22 +1,45 @@
-FROM python:3.7.7-stretch AS BASE
+# Use Python 3.7.7 slim base image
+FROM python:3.7.7-slim-stretch
 
-RUN apt-get update \
-    && apt-get --assume-yes --no-install-recommends install \
-        build-essential \
-        curl \
-        git \
-        jq \
-        libgomp1 \
-        vim
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=off \
+    PIP_DISABLE_PIP_VERSION_CHECK=on
 
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    curl \
+    git \
+    jq \
+    libgomp1 \
+    vim \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
 WORKDIR /app
 
-# upgrade pip version
-RUN pip install --no-cache-dir --upgrade pip
+# Copy requirements first to leverage Docker cache
+COPY requirements.txt .
 
-RUN pip install rasa==3.5.8
+# Install Python dependencies
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
 
-ADD config.yml config.yml
-ADD domain.yml domain.yml
-ADD credentials.yml credentials.yml
-ADD endpoints.yml endpoints.yml
+# Copy Rasa project files
+COPY . .
+
+# Copy only necessary files
+COPY config.yml .
+COPY domain.yml .
+COPY credentials.yml .
+COPY endpoints.yml .
+COPY data/ ./data/
+COPY actions/ ./actions/
+
+# Expose ports
+EXPOSE 5005
+
+# Command to run the Rasa server
+CMD ["rasa", "run", "--enable-api", "--cors", "*", "--debug"]
